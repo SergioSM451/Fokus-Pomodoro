@@ -51,6 +51,18 @@ h6 {
     justify-content: center;
     padding: 4rem 0;
 }
+.app__image-figure {
+    animation: scaleAnimation 3s ease infinite alternate; 
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(1.1); 
+    }
+}
 
 .app__section-banner-container {
     width: 99rem;
@@ -124,10 +136,13 @@ h6 {
     outline: inherit;
 }
 
+
+
 .app__card-button.active {
     border-radius: 0.8rem;
     background: var(--azul-royal);
     font-weight: 600;
+    transition: 0.4s;
 }
 
 .app__card-timer {
@@ -171,7 +186,13 @@ h6 {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    transition: transform 1.6s ease;
 }
+.app__card-primary-button:hover {
+    transform: scale(1.09);
+    
+}
+
 
 .app__footer {
     display: flex;
